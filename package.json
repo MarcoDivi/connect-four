@@ -1,0 +1,27 @@
+{
+  "name": "connect-four",
+  "version": "1.0.0",
+  "description": "A browser-based Connect Four game built with TypeScript and SCSS.",
+  "scripts": {
+    "build-css": "sass assets/styles/style.scss dist/style.css",
+    "watch-css": "sass assets/styles/style.scss dist/style.css --watch",
+    "build-ts": "tsc",
+    "watch-ts": "tsc --watch",
+    "build": "npm run build-css && npm run build-ts",
+    "watch": "concurrently \"npm run watch-css\" \"npm run watch-ts\""
+  },
+  "keywords": [
+    "connect-four",
+    "typescript",
+    "scss",
+    "web-game",
+    "browser"
+  ],
+  "author": "Marco Di Vincenzo",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "sass": "^1.87.0",
+    "typescript": "^5.8.3"
+  }
+}
