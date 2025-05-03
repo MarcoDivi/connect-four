@@ -1,0 +1,92 @@
+/* styles/partials/_framework.scss */
+
+// ------------------------
+// Variables
+// ------------------------
+$gutter-step: 4px;
+$border-radius: 0.5rem; // soft-rounded (~8px)
+
+// ------------------------
+// Container
+// ------------------------
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: $gutter-step * 4;
+  padding-right: $gutter-step * 4;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+// ------------------------
+// Row
+// ------------------------
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter-step;
+  margin-right: -$gutter-step;
+}
+
+// ------------------------
+// Column
+// ------------------------
+.col {
+  flex: 1;
+  padding-left: $gutter-step;
+  padding-right: $gutter-step;
+}
+
+// Optional fixed-width columns (12-grid approximation)
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / 12);
+    max-width: percentage($i / 12);
+  }
+}
+
+// ------------------------
+// Spacing utility classes
+// m = margin
+// p = padding
+// t = top
+// r = right
+// b = bottom
+// l = left
+// ------------------------
+@for $i from 1 through 5 {
+  .m-#{$i} { margin: $gutter-step * $i; }
+  .mt-#{$i} { margin-top: $gutter-step * $i; }
+  .mr-#{$i} { margin-right: $gutter-step * $i; }
+  .mb-#{$i} { margin-bottom: $gutter-step * $i; }
+  .ml-#{$i} { margin-left: $gutter-step * $i; }
+
+  .p-#{$i} { padding: $gutter-step * $i; }
+  .pt-#{$i} { padding-top: $gutter-step * $i; }
+  .pr-#{$i} { padding-right: $gutter-step * $i; }
+  .pb-#{$i} { padding-bottom: $gutter-step * $i; }
+  .pl-#{$i} { padding-left: $gutter-step * $i; }
+}
+
+// ------------------------
+// Flex utilities
+// ------------------------
+.d-flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-row { flex-direction: row;}
+.flex-col { flex-direction: column;}
+
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+
+.full-height { height: 100%;}
+.full-width { width: 100%;}
