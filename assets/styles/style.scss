@@ -8,3 +8,11 @@
     font-weight: 500;
     font-style: normal;
 }
+
+.view {
+    display: none;
+
+    &.show {
+        display: flex;
+    }
+}
